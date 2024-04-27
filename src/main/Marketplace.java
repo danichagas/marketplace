@@ -19,6 +19,9 @@ public class Marketplace {
         menu();
     }
 
+
+    // ---------- Método do menu da loja ----------
+
     private static void menu() {
 
         System.out.println("--------------------------------------------------------------");
@@ -57,6 +60,9 @@ public class Marketplace {
         }
     }
 
+
+    // ---------- Método para registrar os produtos da nossa loja ----------
+
     private static void registerProducts() {
         System.out.println("Nome do produto: ");
         String name = input.next();
@@ -70,6 +76,9 @@ public class Marketplace {
         System.out.println(product.getName() + " foi cadastrado com sucesso!");
         menu();
     }
+
+
+    // ---------- Método para a listagem de nossos produtos ----------
 
     private static void listProducts() {
         if (products.size() > 0) {
@@ -85,7 +94,54 @@ public class Marketplace {
         menu();
     }
 
-    private static void purchaseProducts() {
 
+    // ---------- Método para a compra de nossos produtos da loja ----------
+
+    private static void purchaseProducts() {
+        if (products.size() > 0) {
+            System.out.println("Código do produto \n");
+
+            System.out.println("--------------Produtos Disponíveis--------------");
+            for (Product p : products) {
+                System.out.println(p + "\n");
+            }
+            int id = Integer.parseInt(input.next());
+            boolean isPresent = false;
+
+            for (Product p : products) {
+                if (p.getId() == id) {
+                    int quantity = 0;
+                    try {
+                        quantity = cart.get(p);
+                        // ----- Checa se o produto já está no carrinho, incrementa quantidade
+                        cart.put(p, quantity + 1);
+                    } catch (NullPointerException e) {
+                        // ----- Se o produto for o primeiro do carrinho -----
+                        cart.put(p, 1);
+                    }
+
+                    System.out.println(p.getName() + "adicionado no carrinho!");
+                    isPresent = true;
+
+                    if (isPresent) {
+                        System.out.println("Deseja adicionar outro produto ao carrinho? ");
+                        System.out.println("Digite 1 para sim, ou 0 para finalizar a compra. \n");
+                        int option = Integer.parseInt(input.next());
+
+                        if (option == 1) {
+                            purchaseProducts();
+                        } else {
+                            finishPurchase();
+                        }
+                    }
+                } else {
+                    System.out.println("Produto não encontrado :/");
+                    menu();
+                }
+            }
+        } else {
+            System.out.println("Não existem produtos cadastrados!");
+            menu();
+        }
     }
 }
