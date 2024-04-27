@@ -48,7 +48,7 @@ public class Marketplace {
                 purchaseProducts();
                 break;
             case 4:
-                toSeeProducts();
+                toSeeCart();
                 break;
             case 5:
                 System.out.println("Obrigado pela preferência e volte sempre! <3");
@@ -144,4 +144,6 @@ public class Marketplace {
             menu();
         }
     }
+
+    private static void toSeeCart() {}
 }
