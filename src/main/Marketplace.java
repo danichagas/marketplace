@@ -52,7 +52,7 @@ public class Marketplace {
                 break;
             case 5:
                 System.out.println("Obrigado pela preferência e volte sempre! <3");
-                System.exit();
+                System.exit(0);
             default:
                 System.out.println("Opção Inválida!");
                 menu();
@@ -145,5 +145,18 @@ public class Marketplace {
         }
     }
 
-    private static void toSeeCart() {}
+    private static void toSeeCart() {
+        System.out.println("--- Produtos no seu carrinho! ---");
+        if (cart.size() > 0) {
+            for (Product p : cart.keySet()) {
+                System.out.println("Produto " + p + "\nQuantidade: " + cart.get(p));
+            }
+        } else {
+            System.out.println("Carrinho vazio!");
+        }
+
+        menu();
+    }
+
+
 }
