@@ -1,6 +1,7 @@
 package main;
 
 import model.Product;
+import utils.Utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -159,7 +160,19 @@ public class Marketplace {
     }
 
     private static void finishPurchase() {
+        Double totalValue = 0.0;
+        System.out.println("Seus produtos!");
 
+        for (Product p : cart.keySet()) {
+            int quantity = cart.get(p);
+            totalValue += p.getPrice() * quantity;
+            System.out.println(p);
+            System.out.println("Quantidade: " + quantity);
+            System.out.println("-------------------------");
+        }
+        System.out.println("O valor da sua compra é: " + Utils.doubleToString(totalValue));
+        cart.clear();
+        System.out.println("Obrigado e volte sempre!");
     }
 
 
