@@ -121,7 +121,7 @@ public class Marketplace {
                         cart.put(p, 1);
                     }
 
-                    System.out.println(p.getName() + "adicionado no carrinho!");
+                    System.out.println(p.getName() + " adicionado no carrinho!");
                     isPresent = true;
 
                     if (isPresent) {
