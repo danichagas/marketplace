@@ -100,7 +100,7 @@ public class Marketplace {
 
     private static void purchaseProducts() {
         if (products.size() > 0) {
-            System.out.println("Código do produto \n");
+            System.out.println("Código do produto: \n");
 
             System.out.println("--------------Produtos Disponíveis--------------");
             for (Product p : products) {
