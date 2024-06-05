@@ -7,8 +7,6 @@
 
 A project entirely developed in **Java**, using methods, classes and constructors, in this project you will be able to see your cart, register your products and buy them, all in one project
 
-#### 👾 Explanatory video : [Linkedln Video](https://www.linkedin.com/feed/update/urn:li:activity:7193812436628492288/)!
-
 ## 💻 Technologies
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
 
