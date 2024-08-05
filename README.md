@@ -18,9 +18,6 @@ This system was developed to simplify a supermarket's ordering process and help 
 [![My Skills](https://skillicons.dev/icons?i=git)](https://skillicons.dev)
 <br>
 
-- **Postman** - For testing. <br>
-[![My Skills](https://skillicons.dev/icons?i=postman)](https://skillicons.dev)
-
 ## Functionalities
 - **Register Products**; Allows you to register new products.
 - **List Products**;  List new products in your cart.
