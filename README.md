@@ -16,7 +16,6 @@ This system was developed to simplify a supermarket's ordering process and help 
 
 - **Git** - For version control. <br>
 [![My Skills](https://skillicons.dev/icons?i=git)](https://skillicons.dev)
-<br>
 
 ## Functionalities
 - **Register Products**; Allows you to register new products.
